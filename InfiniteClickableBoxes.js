@@ -6,18 +6,13 @@ btn.addEventListener('click', (evt) => {
     box.className='space';
     var rNum=Math.floor(Math.random()*100);
     box.innerText=rNum;
-/*
-    box.addEventListener('click',(evt)=>{
-        if(evt.target.className==='space'){ 
-            evt.target.classList.toggle('selected');
-        } 
-    })
-    */
     paragraph.appendChild(box); 
 });
 
 paragraph.addEventListener('click',(evt)=> {
-    if(evt.target.className==='space'){ 
-        evt.target.classList.toggle('selected');
+    console.log(evt.target.className);
+    // lookup classList and the contains function
+    if(evt.target.classList.contains('space')){  
+    evt.target.classList.toggle('selected');
     }
 })
